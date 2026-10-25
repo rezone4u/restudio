@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>RE STUDIO 婚禮紀實</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="RE STUDIO 婚禮紀實攝影作品集：訂婚、迎娶、證婚與宴客。Since 2016。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+<style>
+/* Layout: a contact-sheet album. Full-bleed opener, then five chapters, each opened by a red seal; photos sit in justified rows so every row shares one height. */
+:root{
+  --paper:#F5F3F1;
+  --paper-2:#ECE8E4;
+  --ink:#1F1B19;
+  --muted:#6F6863;
+  --rule:#D9D3CD;
+  --seal:#AE2328;
+  --on-seal:#FFF8F2;
+  --on-photo:#FFFFFF;
+  --scrim:rgba(14,11,10,.94);
+  --f-display:"Microsoft JhengHei","微軟正黑體","Microsoft JhengHei UI","PingFang TC","Heiti TC","Noto Sans TC",sans-serif;
+  --f-body:"Microsoft JhengHei","微軟正黑體","Microsoft JhengHei UI","PingFang TC","Heiti TC","Noto Sans TC",sans-serif;
+  --f-mono:"Microsoft JhengHei","微軟正黑體","Microsoft JhengHei UI","PingFang TC","Heiti TC","Noto Sans TC",sans-serif;
+  --gap:clamp(6px,1vw,12px);
+  --wrap:1180px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#151312;--paper-2:#1D1A18;--ink:#EEE9E4;--muted:#A69F98;--rule:#35302C;--seal:#C8383D;--on-seal:#FFF8F2;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#151312;--paper-2:#1D1A18;--ink:#EEE9E4;--muted:#A69F98;--rule:#35302C;--seal:#C8383D;--on-seal:#FFF8F2;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.brand{font-family:var(--f-display);font-weight:600;letter-spacing:.18em;font-size:15px;text-decoration:none;white-space:nowrap}
+.toc{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.toc a{display:grid;place-items:center;width:32px;height:32px;font-family:var(--f-display);font-size:14px;text-decoration:none;color:var(--muted);border-radius:2px;transition:color .2s,background .2s}
+.toc a:hover,.toc a[aria-current="true"]{color:var(--on-seal);background:var(--seal)}
+.toc .toc-contact{width:auto;padding-inline:10px;font-family:var(--f-body);font-size:13px;letter-spacing:.1em}
+
+/* opener */
+.hero{position:relative;height:clamp(420px,74vh,780px);overflow:hidden;background:#0d0b0a}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%)}
+.hero-copy{position:absolute;inset:auto 0 0;z-index:1;color:var(--on-photo);padding-block:0 clamp(28px,6vh,56px)}
+.hero-copy .wrap{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.85;margin:0}
+.hero h1{font-family:var(--f-display);font-weight:600;font-size:clamp(40px,7.4vw,92px);line-height:1.08;letter-spacing:.06em;margin:0;text-wrap:balance}
+.hero h1 small{display:block;font-size:.34em;font-weight:400;letter-spacing:.32em;margin-top:.7em;opacity:.92}
+
+/* intro */
+.intro{padding-block:clamp(56px,10vw,120px) clamp(40px,7vw,80px)}
+.intro .wrap:not(.wrap-scope){display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.intro h2{font-family:var(--f-display);font-weight:600;font-size:clamp(26px,3.4vw,40px);line-height:1.4;margin:0;text-wrap:balance}
+.intro p{margin:0 0 1em;max-width:34em;color:var(--ink)}
+.intro p.sub{color:var(--muted)}
+.intro p.pull{font-family:var(--f-display);font-weight:700;font-size:clamp(18px,1.7vw,22px);line-height:1.7;letter-spacing:.06em;padding-left:18px;border-left:2px solid var(--seal);margin:1.6em 0 0}
+.scope{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:clamp(36px,6vw,64px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.scope a{display:flex;flex-direction:column;gap:4px;padding:18px 16px 20px;text-decoration:none;border-left:1px solid var(--rule);transition:background .2s}
+.scope a:first-child{border-left:0}
+.scope a:hover{background:var(--paper-2)}
+.scope b{font-family:var(--f-display);font-weight:600;font-size:20px;letter-spacing:.12em}
+.scope span{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* chapters */
+.chapter{padding-block:clamp(56px,9vw,112px) 0;scroll-margin-top:56px}
+.ch-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,32px);align-items:start;margin-bottom:clamp(24px,4vw,44px)}
+.seal{display:grid;place-items:center;width:clamp(52px,6vw,68px);aspect-ratio:1;background:var(--seal);color:var(--on-seal);font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3vw,34px);border-radius:3px;transform:rotate(-3deg);box-shadow:inset 0 0 0 3px color-mix(in srgb,var(--on-seal) 22%,transparent)}
+.ch-meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 6px;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--muted)}
+.ch-meta span+span::before{content:"/";margin-right:18px;opacity:.5}
+.chapter h2{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,4.2vw,52px);letter-spacing:.1em;line-height:1.2;margin:0 0 12px}
+.ch-lede{margin:0;max-width:36em;color:var(--muted)}
+
+.rows{display:flex;flex-direction:column;gap:var(--gap)}
+.row{display:flex;gap:var(--gap)}
+.row-tall{width:min(100%,780px);margin-inline:auto}
+.ph{margin:0;flex:var(--ar) 1 0;min-width:0;aspect-ratio:var(--ar);background:var(--paper-2);overflow:hidden;max-width:100%}
+.ph-btn{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
+.ph-btn:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s}
+@media (hover:hover){.ph-btn:hover img{transform:scale(1.025)}}
+@media (prefers-reduced-motion: reduce){.ph img{transition:none}.ph-btn:hover img{transform:none}}
+
+@media (max-width:680px){
+  .row{flex-direction:column}
+  .row-keep,.row-tall{flex-direction:row}
+  .row:not(.row-keep):not(.row-tall) .ph{flex:none;width:100%}
+  .intro .wrap:not(.wrap-scope){grid-template-columns:1fr}
+  .scope{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .scope a:nth-child(3){border-left:0}
+  .scope a:nth-child(n+3){border-top:1px solid var(--rule)}
+  .toc .toc-contact{display:none}
+}
+
+/* contact */
+.contact{margin-top:clamp(72px,12vw,140px);background:var(--paper-2);border-top:1px solid var(--rule)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);padding-block:clamp(56px,9vw,100px)}
+.contact h2{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,4.2vw,50px);letter-spacing:.08em;line-height:1.3;margin:0 0 16px;text-wrap:balance}
+.contact p{margin:0;color:var(--muted);max-width:30em}
+.ways{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.ways li{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.ways .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;color:var(--muted)}
+.ways .v{font-size:17px;overflow-wrap:anywhere}
+.ways .v.todo{color:var(--muted);font-style:normal}
+.book{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 30px;background:var(--seal);color:var(--on-seal);font-family:var(--f-body);font-size:16px;font-weight:700;letter-spacing:.16em;text-decoration:none;border-radius:2px;transition:background .2s}
+.btn:hover{background:color-mix(in srgb,var(--seal) 85%,black)}
+.note{font-size:14px}
+.form-frame{grid-column:1/-1;background:#fff;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.form-frame iframe{display:block;width:100%;height:1400px;border:0}
+@media (max-width:680px){.contact .wrap{grid-template-columns:1fr}}
+footer{padding-block:28px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:var(--scrim);display:grid;grid-template-rows:auto minmax(0,1fr) auto;color:#EEE9E4;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.lb-top,.lb-bot{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;font-family:var(--f-mono);font-size:12px;letter-spacing:.16em}
+.lb-stage{position:relative;display:grid;place-items:center;min-height:0;padding:0 clamp(8px,6vw,80px)}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
+.lb button{font:inherit;color:inherit;background:transparent;border:1px solid rgba(238,233,228,.28);border-radius:2px;cursor:pointer}
+.lb .x{width:40px;height:40px;font-size:20px;line-height:1}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:64px;font-size:22px;background:rgba(0,0,0,.25)}
+.lb .prev{left:clamp(4px,1.5vw,20px)}.lb .next{right:clamp(4px,1.5vw,20px)}
+.lb button:hover{border-color:rgba(238,233,228,.7)}
+@media (max-width:680px){.lb .nav{display:none}}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">RE STUDIO</a>
+    <nav aria-label="章節">
+      <ul class="toc">
+        <li><a href="#ch1" title="飯店迎娶">壹</a></li>
+        <li><a href="#ch2" title="老家迎娶">貳</a></li>
+        <li><a href="#ch3" title="戶外證婚">參</a></li>
+        <li><a href="#ch4" title="傳統迎娶">肆</a></li>
+        <li><a href="#ch5" title="中式訂婚">伍</a></li>
+        <li><a class="toc-contact" href="#contact">預約</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="img/c3-30.jpg" alt="新人在花瓣落下的宴會廳中進場" fetchpriority="high">
+    <div class="hero-copy">
+      <div class="wrap">
+        <p class="eyebrow">RE STUDIO · SINCE 2016</p>
+        <h1>婚禮記錄精選輯<small>訂婚・迎娶・證婚・宴客</small></h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="intro" aria-labelledby="intro-t">
+    <div class="wrap">
+      <h2 id="intro-t">那一天最動人的畫面，交由我們為您捕捉。</h2>
+      <div>
+        <p>我們以紀實的方式記錄婚禮。那一天，您忙著感動、忙著笑，身在其中，很難看見全貌。我們站在一旁，用鏡頭替您記下那些自己看不到的角度：梳化時的笑容、拜別時泛紅的眼眶、揮汗闖關的熱鬧。</p>
+        <p class="pull">您經歷的，是那一天；<br>我們留下的，是您沒能看見的那一面。</p>
+      </div>
+    </div>
+    <div class="wrap wrap-scope">
+      <nav class="scope" aria-label="拍攝類型">
+        <a href="#ch5"><b>訂婚</b><span>奉甜茶、戴金飾、家族合影</span></a>
+        <a href="#ch4"><b>迎娶</b><span>闖關、拜別、撐米篩、擲扇</span></a>
+        <a href="#ch3"><b>證婚</b><span>戶外儀式、誓詞、交換戒指</span></a>
+        <a href="#ch1"><b>宴客</b><span>進場、敬酒、家人與賓客</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+<section class="chapter" id="ch1" aria-labelledby="ch1-t">
+  <header class="ch-head">
+    <span class="seal" aria-hidden="true">壹</span>
+    <div class="ch-text">
+      <p class="ch-meta"><span>第壹章</span><span>梳化・拜別・宴客</span></p>
+      <h2 id="ch1-t">飯店迎娶</h2>
+      <p class="ch-lede">從清晨的梳化開始，伴郎闖關、新人拜別父母，一路記錄到晚宴上舉杯的家人。</p>
+    </div>
+  </header>
+  <div class="rows"><div class="row row-keep"><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="0" aria-label="放大照片"><img src="img/c1-01.jpg" alt="婚禮紀實照片" loading="eager" decoding="async" data-full="img/c1-01.jpg" width="1280" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="1" aria-label="放大照片"><img src="img/c1-02.jpg" alt="婚禮紀實照片" loading="eager" decoding="async" data-full="img/c1-02.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="2" aria-label="放大照片"><img src="img/c1-03.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-03.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="3" aria-label="放大照片"><img src="img/c1-04.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-04.jpg" width="1280" height="1920"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="4" aria-label="放大照片"><img src="img/c1-05.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-05.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="5" aria-label="放大照片"><img src="img/c1-06.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-06.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="6" aria-label="放大照片"><img src="img/c1-07.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-07.jpg" width="1280" height="1920"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="7" aria-label="放大照片"><img src="img/c1-08.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-08.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="8" aria-label="放大照片"><img src="img/c1-09.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-09.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="9" aria-label="放大照片"><img src="img/c1-10.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-10.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="10" aria-label="放大照片"><img src="img/c1-11.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c1-11.jpg" width="1920" height="1280"></button></figure></div></div>
+</section>
+
+<section class="chapter" id="ch2" aria-labelledby="ch2-t">
+  <header class="ch-head">
+    <span class="seal" aria-hidden="true">貳</span>
+    <div class="ch-text">
+      <p class="ch-meta"><span>第貳章</span><span>伴郎團・伴娘團</span></p>
+      <h2 id="ch2-t">老家迎娶</h2>
+      <p class="ch-lede">在老家客廳與巷口完成迎娶。熱鬧的兄弟團、姊妹淘，和出門前那一個捨不得放開的擁抱。</p>
+    </div>
+  </header>
+  <div class="rows"><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="11" aria-label="放大照片"><img src="img/c2-12.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-12.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="12" aria-label="放大照片"><img src="img/c2-13.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-13.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="13" aria-label="放大照片"><img src="img/c2-14.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-14.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="14" aria-label="放大照片"><img src="img/c2-15.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-15.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="15" aria-label="放大照片"><img src="img/c2-16.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-16.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="16" aria-label="放大照片"><img src="img/c2-17.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-17.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="17" aria-label="放大照片"><img src="img/c2-18.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-18.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="18" aria-label="放大照片"><img src="img/c2-19.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-19.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="19" aria-label="放大照片"><img src="img/c2-20.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-20.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="20" aria-label="放大照片"><img src="img/c2-21.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c2-21.jpg" width="1920" height="1280"></button></figure></div></div>
+</section>
+
+<section class="chapter" id="ch3" aria-labelledby="ch3-t">
+  <header class="ch-head">
+    <span class="seal" aria-hidden="true">參</span>
+    <div class="ch-text">
+      <p class="ch-meta"><span>第參章</span><span>花拱門・晚宴進場</span></p>
+      <h2 id="ch3-t">戶外證婚</h2>
+      <p class="ch-lede">午後在花拱門下交換誓詞，入夜後在燈光與花瓣裡進場。同一天，兩種完全不同的光。</p>
+    </div>
+  </header>
+  <div class="rows"><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="21" aria-label="放大照片"><img src="img/c3-22.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-22.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:0.6664"><button type="button" class="ph-btn" data-i="22" aria-label="放大照片"><img src="img/c3-23.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-23.jpg" width="1279" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="23" aria-label="放大照片"><img src="img/c3-24.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-24.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="24" aria-label="放大照片"><img src="img/c3-25.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-25.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:0.6664"><button type="button" class="ph-btn" data-i="25" aria-label="放大照片"><img src="img/c3-26.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-26.jpg" width="1279" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="26" aria-label="放大照片"><img src="img/c3-27.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-27.jpg" width="1920" height="1280"></button></figure></div><div class="row row-tall"><figure class="ph" style="--ar:0.6664"><button type="button" class="ph-btn" data-i="27" aria-label="放大照片"><img src="img/c3-28.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-28.jpg" width="1279" height="1920"></button></figure><figure class="ph" style="--ar:0.6664"><button type="button" class="ph-btn" data-i="28" aria-label="放大照片"><img src="img/c3-29.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-29.jpg" width="1279" height="1920"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="29" aria-label="放大照片"><img src="img/c3-30.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-30.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="30" aria-label="放大照片"><img src="img/c3-31.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c3-31.jpg" width="1920" height="1280"></button></figure></div></div>
+</section>
+
+<section class="chapter" id="ch4" aria-labelledby="ch4-t">
+  <header class="ch-head">
+    <span class="seal" aria-hidden="true">肆</span>
+    <div class="ch-text">
+      <p class="ch-meta"><span>第肆章</span><span>撐米篩・擲扇</span></p>
+      <h2 id="ch4-t">傳統迎娶</h2>
+      <p class="ch-lede">撐米篩、上禮車、擲扇。每一個傳統習俗，都是長輩的心意，也都值得被好好留下來。</p>
+    </div>
+  </header>
+  <div class="rows"><div class="row row-keep"><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="31" aria-label="放大照片"><img src="img/c4-32.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-32.jpg" width="1280" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="32" aria-label="放大照片"><img src="img/c4-33.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-33.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="33" aria-label="放大照片"><img src="img/c4-34.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-34.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="34" aria-label="放大照片"><img src="img/c4-35.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-35.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="35" aria-label="放大照片"><img src="img/c4-36.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-36.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="36" aria-label="放大照片"><img src="img/c4-37.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-37.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="37" aria-label="放大照片"><img src="img/c4-38.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-38.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="38" aria-label="放大照片"><img src="img/c4-39.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-39.jpg" width="1920" height="1280"></button></figure></div><div class="row row-tall"><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="39" aria-label="放大照片"><img src="img/c4-40.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-40.jpg" width="1280" height="1920"></button></figure><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="40" aria-label="放大照片"><img src="img/c4-41.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c4-41.jpg" width="1280" height="1920"></button></figure></div></div>
+</section>
+
+<section class="chapter" id="ch5" aria-labelledby="ch5-t">
+  <header class="ch-head">
+    <span class="seal" aria-hidden="true">伍</span>
+    <div class="ch-text">
+      <p class="ch-meta"><span>第伍章</span><span>龍鳳褂・奉甜茶</span></p>
+      <h2 id="ch5-t">中式訂婚</h2>
+      <p class="ch-lede">一身龍鳳褂，奉甜茶、戴金飾。刺繡的紋理、戒指上的光，細節都是故事的一部分。</p>
+    </div>
+  </header>
+  <div class="rows"><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="41" aria-label="放大照片"><img src="img/c5-42.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-42.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="42" aria-label="放大照片"><img src="img/c5-43.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-43.jpg" width="1280" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="43" aria-label="放大照片"><img src="img/c5-44.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-44.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="44" aria-label="放大照片"><img src="img/c5-45.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-45.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="45" aria-label="放大照片"><img src="img/c5-46.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-46.jpg" width="1920" height="1280"></button></figure></div><div class="row"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="46" aria-label="放大照片"><img src="img/c5-47.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-47.jpg" width="1920" height="1280"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="47" aria-label="放大照片"><img src="img/c5-48.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-48.jpg" width="1920" height="1280"></button></figure></div><div class="row row-keep"><figure class="ph" style="--ar:0.6667"><button type="button" class="ph-btn" data-i="48" aria-label="放大照片"><img src="img/c5-49.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-49.jpg" width="1280" height="1920"></button></figure><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="49" aria-label="放大照片"><img src="img/c5-50.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-50.jpg" width="1920" height="1280"></button></figure></div><div class="row row-solo"><figure class="ph" style="--ar:1.5"><button type="button" class="ph-btn" data-i="50" aria-label="放大照片"><img src="img/c5-51.jpg" alt="婚禮紀實照片" loading="lazy" decoding="async" data-full="img/c5-51.jpg" width="1920" height="1280"></button></figure></div></div>
+</section>
+  </div>
+
+  <section class="contact" id="contact" aria-labelledby="contact-t">
+    <div class="wrap">
+      <div>
+        <h2 id="contact-t">把您的那一天，交給我們記錄。</h2>
+        <p>歡迎告訴我們婚期、地點與儀式安排，我們會回覆檔期與拍攝方案。</p>
+      </div>
+      <div class="book">
+        <a class="btn" href="https://forms.gle/1HnkU5ddU7ikr6367" target="_blank" rel="noopener">填寫預約表單 <span aria-hidden="true">↗</span></a>
+        <p class="note">表單會在新分頁開啟。請填寫婚期、儀式類型（訂婚／迎娶／證婚／宴客）與地點。</p>
+      </div>
+      <div class="form-frame"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5l9j806dLabfxDgCIsr9F211zmk8YIFIo_XyzjMef2-GqJQ/viewform?embedded=true" title="RE STUDIO 預約表單" loading="lazy">載入中…</iframe></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>RE STUDIO</span><span>婚禮紀實攝影 · SINCE 2016</span></div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="照片瀏覽">
+  <div class="lb-top"><span id="lb-ch"></span><button type="button" class="x" id="lb-x" aria-label="關閉">×</button></div>
+  <div class="lb-stage" id="lb-stage">
+    <button type="button" class="nav prev" id="lb-prev" aria-label="上一張">‹</button>
+    <img id="lb-img" alt="">
+    <button type="button" class="nav next" id="lb-next" aria-label="下一張">›</button>
+  </div>
+  <div class="lb-bot"><span>RE STUDIO</span><span>← → 切換 · ESC 關閉</span></div>
+</div>
+
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.ph-btn'));
+  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),
+      chEl=document.getElementById('lb-ch');
+  var cur=0,last=null;
+  function show(i){
+    cur=(i+btns.length)%btns.length;
+    var b=btns[cur],src=b.querySelector('img');
+    img.src=src.getAttribute('data-full');img.alt=src.alt;
+    var sec=b.closest('.chapter');
+    chEl.textContent=sec?sec.querySelector('.seal').textContent+'　'+sec.querySelector('h2').textContent:'';
+    [cur+1,cur-1].forEach(function(k){var t=btns[(k+btns.length)%btns.length];if(t){var p=new Image();p.src=t.querySelector('img').getAttribute('data-full');}});
+  }
+  function open(i){last=document.activeElement;lb.hidden=false;document.body.style.overflow='hidden';show(i);document.getElementById('lb-x').focus();}
+  function close(){lb.hidden=true;document.body.style.overflow='';img.removeAttribute('src');if(last)last.focus();}
+  btns.forEach(function(b,i){b.addEventListener('click',function(){open(i);});});
+  document.getElementById('lb-x').addEventListener('click',close);
+  document.getElementById('lb-prev').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+  document.getElementById('lb-next').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+  document.getElementById('lb-stage').addEventListener('click',function(e){if(e.target===this)close();});
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden)return;
+    if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(cur+1);else if(e.key==='ArrowLeft')show(cur-1);
+  });
+  var x0=null;
+  lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(cur+(dx<0?1:-1));x0=null;});
+
+  // highlight current chapter in the top bar
+  var links={};[].forEach.call(document.querySelectorAll('.toc a[href^="#ch"]'),function(a){links[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      var a=links[en.target.id];if(!a)return;
+      if(en.isIntersecting){for(var k in links)links[k].removeAttribute('aria-current');a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-45% 0px -50% 0px'});
+    [].forEach.call(document.querySelectorAll('.chapter'),function(s){io.observe(s);});
+  }
+})();
+</script>
+
+</body>
+</html>
